@@ -41,6 +41,7 @@ def users(request):
             data=user
         )
         serializer.is_valid(raise_exception=True)
+        user_list.append(serializer.data)
     return Response(user_list, status=status.HTTP_200_OK)
 
 
