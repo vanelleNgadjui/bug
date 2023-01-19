@@ -1,0 +1,75 @@
+GET http://127.0.0.1:8000/users/
+
+###
+GET http://127.0.0.1:8000/users/1
+
+
+###
+POST http://127.0.0.1:8000/user/post/
+Content-Type: application/json
+
+{
+    "name": "vanelle",
+}
+
+
+###
+PATCH http://127.0.0.1:8000/user/post/
+Content-Type: application/json
+
+{
+    "name": "vanelle",
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+PUT http://127.0.0.1:8000/api/v1/bookmarks/3/
+Content-Type: application/json
+
+{
+    "name": "data",
+    "url": "https://data.fr",
+    "tags": "pas de site",
+    "comments": "C'est pas moi",
+    "user": 1
+}
+
+###
+PATCH  http://127.0.0.1:8000/api/v1/bookmarks/3/
+Content-Type: application/json
+
+{
+    "name": "data vanelle"
+}
+
+###
+DELETE   http://127.0.0.1:8000/api/v1/bookmarks/3/
+
+###
+POST http://127.0.0.1:8000/api/auth/token/login/
+Content-Type: application/json
+
+{
+    "username" : "nouveluser",
+    "password" : "motdepasse1"
+}
+
+###
+GET https://vanelle.alwaysdata.net/django/api/v1/bookmarks/
+Authorization: Token 0ade7f06522e7a0e8b6f4627d7654ee989cb6ab0
+
+### desactive le token
+POST http://127.0.0.1:8000/api/auth/token/logout/
+Authorization: Token 0ade7f06522e7a0e8b6f4627d7654ee989cb6ab0
